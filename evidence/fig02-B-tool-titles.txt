@@ -1,0 +1,5 @@
+Reading listing ., listing spec
+Creating jsonschema_impl.py
+Running: ./run_tests.sh --max-fail 5
+Editing jsonschema_impl.py
+Running: ./run_tests.sh

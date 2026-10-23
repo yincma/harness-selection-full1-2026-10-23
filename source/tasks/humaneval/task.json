@@ -1,0 +1,24 @@
+{
+  "id": "humaneval",
+  "title": "HumanEval/91 is_bored: complete one function (simple anchor)",
+  "tier": "simple",
+  "template": "template",
+  "task_prompt": "task_prompt.md",
+  "direct_prompt": "direct_prompt.md",
+  "direct_output": {"mode": "single_file", "path": "solution.py"},
+  "guard": {
+    "write_files": ["solution.py", "NOTES.md"],
+    "write_dirs": ["scratch"],
+    "shell": [
+      "\\./run_tests\\.sh( --json| --max-fail [0-9]+| --example [0-9]+)*",
+      "\\./run_py\\.sh scratch/[A-Za-z0-9_./-]+\\.py",
+      "ls( -[a-zA-Z]+)?( [A-Za-z0-9_./-]+)?"
+    ],
+    "shell_help": "only ./run_tests.sh [--json] [--max-fail N] [--example N], ./run_py.sh scratch/<file>.py and ls are allowed"
+  },
+  "setup": null,
+  "visible": {"json_cmd": ["./run_tests.sh", "--json"], "text_cmd": ["./run_tests.sh", "--max-fail", "5"]},
+  "grader": ["{py}", "{task_dir}/grade_task.py", "{task_runs}"],
+  "metric": {"score": "official hidden HumanEval check passes: 100, else 0",
+             "secondary": "provided docstring examples passed, % of 2"}
+}

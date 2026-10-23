@@ -1,0 +1,510 @@
+{
+  "screenshot_method": "Headless browser opens local record-reader HTML generated from exact selected fields/lines. Not original runtime capture. No experiment re-run.",
+  "model_thoughts_included": false,
+  "colors": {
+    "A": "#596F83",
+    "B": "#007F91",
+    "Bx4": "#AD7100",
+    "C": "#A6435C"
+  },
+  "path_convention": "Original paths are relative to the unpublished experiment root; excerpt paths are relative to this repository.",
+  "sources": [
+    {
+      "original_path": "runs/full1/jsonschema/A_direct/done.json",
+      "original_sha256": "a172c30d6fb01d7965b9192a7444b9eaccb89f100d58110d5c4e4b7a3032e7d6",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status",
+          "/tool_calls",
+          "/out/files_written"
+        ],
+        "format": "one field per line"
+      },
+      "excerpt_path": "evidence/fig02-A-record.txt",
+      "excerpt_sha256": "e44a713bbbcc2385c54bbc79bcfbd4d69a63c0ea1c40a0b943ae8abec540b38a",
+      "published_excerpt_sha256": "e44a713bbbcc2385c54bbc79bcfbd4d69a63c0ea1c40a0b943ae8abec540b38a",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/A_direct/run/run.json",
+      "original_sha256": "1f1e0f884c6b2c30ee529e61c5f97ac5ce5a98770edec5aafb3e8e0500c17dd6",
+      "selector": {
+        "json_pointer": "/final_text",
+        "selected_lines": [
+          1,
+          8
+        ]
+      },
+      "excerpt_path": "evidence/fig02-A-reply.txt",
+      "excerpt_sha256": "316bcd042bbef8d7f1cb166adf9918a71408048d87e0858f3d799cd6910734be",
+      "published_excerpt_sha256": "316bcd042bbef8d7f1cb166adf9918a71408048d87e0858f3d799cd6910734be",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_1/run/events.jsonl",
+      "original_sha256": "28d465c8a45cd32e214cba2ef4988a7753f55fc2fbf7210975c04cbe14aae4f4",
+      "selector": {
+        "jsonl_lines_and_title_fields": [
+          [
+            17,
+            "Reading listing ., listing spec"
+          ],
+          [
+            141,
+            "Creating jsonschema_impl.py"
+          ],
+          [
+            149,
+            "Running: ./run_tests.sh --max-fail 5"
+          ],
+          [
+            223,
+            "Editing jsonschema_impl.py"
+          ],
+          [
+            1737,
+            "Running: ./run_tests.sh"
+          ]
+        ]
+      },
+      "excerpt_path": "evidence/fig02-B-tool-titles.txt",
+      "excerpt_sha256": "f017bbb96ff3efe29cc79fbcf789382989d0ecdddb76d0c14098f1037e806d25",
+      "published_excerpt_sha256": "f017bbb96ff3efe29cc79fbcf789382989d0ecdddb76d0c14098f1037e806d25",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_1/done.json",
+      "original_sha256": "f8cf153bcb703b0d36a2130b46d5724032eb5dfc25cdb2ee90e34c109abdaf73",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status",
+          "/tool_calls"
+        ]
+      },
+      "excerpt_path": "evidence/fig02-B-record.txt",
+      "excerpt_sha256": "76ae294c88e13031d32ca86c20dda4c2c6d0008a1b77e753578563d77c2dd9b2",
+      "published_excerpt_sha256": "76ae294c88e13031d32ca86c20dda4c2c6d0008a1b77e753578563d77c2dd9b2",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_1/visible_result.txt",
+      "original_sha256": "9da7a6611fe7f8106264049a7c651e26d66c376328497791a5b76bdadb162241",
+      "selector": {
+        "line": 1
+      },
+      "excerpt_path": "evidence/fig02-B-visible.txt",
+      "excerpt_sha256": "719b77a7068d8e02a15d779a19f5b4877f370321aad710f1f6f356f14efaa1ae",
+      "published_excerpt_sha256": "719b77a7068d8e02a15d779a19f5b4877f370321aad710f1f6f356f14efaa1ae",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_1/done.json",
+      "original_sha256": "f8cf153bcb703b0d36a2130b46d5724032eb5dfc25cdb2ee90e34c109abdaf73",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status"
+        ],
+        "row_label": "B_1"
+      },
+      "excerpt_path": "evidence/fig02-Bx4-B_1.txt",
+      "excerpt_sha256": "bba8f68b229a7a28079df50a454451916e8f2bc48eb188f0c4a8d47aa6d10878",
+      "published_excerpt_sha256": "bba8f68b229a7a28079df50a454451916e8f2bc48eb188f0c4a8d47aa6d10878",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_2/done.json",
+      "original_sha256": "2c170688438e17ff2e10012acea38164d6438a005be62e00bd4c3c20bd9cb726",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status"
+        ],
+        "row_label": "B_2"
+      },
+      "excerpt_path": "evidence/fig02-Bx4-B_2.txt",
+      "excerpt_sha256": "5d9dc361d675af392963669f2c5b3c64b3c1a4aeb13d53363e8f227bc5742a39",
+      "published_excerpt_sha256": "5d9dc361d675af392963669f2c5b3c64b3c1a4aeb13d53363e8f227bc5742a39",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_3/done.json",
+      "original_sha256": "f795350cb669ae2810f6621fddb272cc06c436446d7c39e673dd77204ec98d4c",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status"
+        ],
+        "row_label": "B_3"
+      },
+      "excerpt_path": "evidence/fig02-Bx4-B_3.txt",
+      "excerpt_sha256": "40f8d2f2b1f40aab572a14779cbd2b1cbf1c400bdc81662d9f8e45c76ecdad6c",
+      "published_excerpt_sha256": "40f8d2f2b1f40aab572a14779cbd2b1cbf1c400bdc81662d9f8e45c76ecdad6c",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/B_4/done.json",
+      "original_sha256": "17339054e3c780f7bdf24f48fb2fbaf4959030919bc547af68467f1a955008b3",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status"
+        ],
+        "row_label": "B_4"
+      },
+      "excerpt_path": "evidence/fig02-Bx4-B_4.txt",
+      "excerpt_sha256": "ff4b6ade90622e01356efd48a744e0a95915f3660d287ec387d433fb47c306ba",
+      "published_excerpt_sha256": "ff4b6ade90622e01356efd48a744e0a95915f3660d287ec387d433fb47c306ba",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/Bx4_select/done.json",
+      "original_sha256": "44651a86c257b94108abbcad4c04d94bb92023e57d6291fbb0eaec634bfd9286",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/status",
+          "/out"
+        ]
+      },
+      "excerpt_path": "evidence/fig02-selector.txt",
+      "excerpt_sha256": "3e5580128f366f626f3430152f0a05864a009a053754faac347dfa06d53605d8",
+      "published_excerpt_sha256": "3e5580128f366f626f3430152f0a05864a009a053754faac347dfa06d53605d8",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/Bx4_select/done.json",
+      "original_sha256": "44651a86c257b94108abbcad4c04d94bb92023e57d6291fbb0eaec634bfd9286",
+      "selector": {
+        "json_pointer": "/out/choice"
+      },
+      "excerpt_path": "evidence/fig02-selector-choice.txt",
+      "excerpt_sha256": "e53d4cad1445e5531d64929818f2cfd505065782a92cab15ced84ef904f879f1",
+      "published_excerpt_sha256": "e53d4cad1445e5531d64929818f2cfd505065782a92cab15ced84ef904f879f1",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_propose/done.json",
+      "original_sha256": "384a4327c8417480e3e3785d831f7832d4e3fafd1677a15cd8cb0ee98b220480",
+      "selector": {
+        "json_pointers": [
+          "/state"
+        ],
+        "stage": "C_propose",
+        "display_alias": "tools = tool_calls"
+      },
+      "excerpt_path": "evidence/fig02-C_propose.txt",
+      "excerpt_sha256": "345abe3c0a54ed5965304ec7494a9abec71eff7698540e25f75d1fe2e2137ad0",
+      "published_excerpt_sha256": "345abe3c0a54ed5965304ec7494a9abec71eff7698540e25f75d1fe2e2137ad0",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_probe_general/done.json",
+      "original_sha256": "9158215515ac602de4d506453d187a20e5f65847553718d8f82097e7d5e6ff1b",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/tool_calls"
+        ],
+        "stage": "C_probe_general",
+        "display_alias": "tools = tool_calls"
+      },
+      "excerpt_path": "evidence/fig02-C_probe_general.txt",
+      "excerpt_sha256": "8807c75a65f140b848398cb69bc9b13cfdc9b8220110fc8e4155ccd9e82b8540",
+      "published_excerpt_sha256": "8807c75a65f140b848398cb69bc9b13cfdc9b8220110fc8e4155ccd9e82b8540",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_probe_specific/done.json",
+      "original_sha256": "5e59876a3f9f48eb7f58d65c64505fac5025c16b45934bf46c994202c04c4a6c",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/tool_calls"
+        ],
+        "stage": "C_probe_specific",
+        "display_alias": "tools = tool_calls"
+      },
+      "excerpt_path": "evidence/fig02-C_probe_specific.txt",
+      "excerpt_sha256": "206d16da32132ec0bbbb6cb135cb2a546969e315254b29709a51d93c427412d3",
+      "published_excerpt_sha256": "206d16da32132ec0bbbb6cb135cb2a546969e315254b29709a51d93c427412d3",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_compose/done.json",
+      "original_sha256": "60d0abe2e0c2a0973eaee24c8c69fd399205ab45c5eb782ebb76aae7a6cdd54f",
+      "selector": {
+        "json_pointers": [
+          "/state"
+        ],
+        "stage": "C_compose",
+        "display_alias": "tools = tool_calls"
+      },
+      "excerpt_path": "evidence/fig02-C_compose.txt",
+      "excerpt_sha256": "e7c5f710cadffbc5de798c5d5120cf0ba5e09caa0d2df0b6b77a1b5001292b31",
+      "published_excerpt_sha256": "e7c5f710cadffbc5de798c5d5120cf0ba5e09caa0d2df0b6b77a1b5001292b31",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_final/done.json",
+      "original_sha256": "612519a7efb79d7f0f3219e5f4cea76fae8560987b35383d5a803ae6b06b5f81",
+      "selector": {
+        "json_pointers": [
+          "/state",
+          "/tool_calls"
+        ],
+        "stage": "C_final",
+        "display_alias": "tools = tool_calls"
+      },
+      "excerpt_path": "evidence/fig02-C_final.txt",
+      "excerpt_sha256": "63c6d6858835d3efdbb9ce86275b3f24086685a85837ec3c07ce5bf64dc8f31c",
+      "published_excerpt_sha256": "63c6d6858835d3efdbb9ce86275b3f24086685a85837ec3c07ce5bf64dc8f31c",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_propose/attempt1/output.md",
+      "original_sha256": "3a36b308c72d6eb811b82808822245467cde67babd0208dd7a8593bae576106a",
+      "selector": {
+        "line_numbers": [
+          15,
+          45
+        ]
+      },
+      "excerpt_path": "evidence/fig02-C_propose-tags.txt",
+      "excerpt_sha256": "888386c77a019af143f2d977c5b0eae56c9d82a9e800131012344c35006d4a8d",
+      "published_excerpt_sha256": "888386c77a019af143f2d977c5b0eae56c9d82a9e800131012344c35006d4a8d",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_compose/attempt1/output.md",
+      "original_sha256": "f1a631af1d10507c77c67c84a0e086e0c4e7b50ae6b3f11a03b7672b16db62ef",
+      "selector": {
+        "line_numbers": [
+          10
+        ]
+      },
+      "excerpt_path": "evidence/fig02-C_compose-tags.txt",
+      "excerpt_sha256": "4c1e98b367aa4af764ac4bfccfe8f55c24be1f8cbd9490a91583be706dd4035a",
+      "published_excerpt_sha256": "4c1e98b367aa4af764ac4bfccfe8f55c24be1f8cbd9490a91583be706dd4035a",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_propose/attempt1/output.md",
+      "original_sha256": "3a36b308c72d6eb811b82808822245467cde67babd0208dd7a8593bae576106a",
+      "selector": {
+        "line_numbers": [
+          22
+        ],
+        "artifact": "prompt_general"
+      },
+      "excerpt_path": "evidence/fig02-C-new-directive.txt",
+      "excerpt_sha256": "09b0f4386a95f860b73d3b4855d9b1f54eed25be2f1b5411ae584c50e0e0e439",
+      "published_excerpt_sha256": "09b0f4386a95f860b73d3b4855d9b1f54eed25be2f1b5411ae584c50e0e0e439",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/jsonschema/C_compose/attempt1/output.md",
+      "original_sha256": "f1a631af1d10507c77c67c84a0e086e0c4e7b50ae6b3f11a03b7672b16db62ef",
+      "selector": {
+        "line_numbers": [
+          13
+        ],
+        "artifact": "prompt_final"
+      },
+      "excerpt_path": "evidence/fig02-C-final-directive.txt",
+      "excerpt_sha256": "046df6c814a9d1ebe4b484504b1e612f76f62ac7e417143faeea5d3403f8af3b",
+      "published_excerpt_sha256": "046df6c814a9d1ebe4b484504b1e612f76f62ac7e417143faeea5d3403f8af3b",
+      "full_original_included": false
+    },
+    {
+      "original_path": "tasks/humaneval/template/solution.py",
+      "original_sha256": "9445e82177f062459a801e24909bc856435701d82f1d67a9dad1f9d6fd0f6362",
+      "selector": {
+        "line_numbers": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "excerpt_path": "evidence/fig03-humaneval-visible.txt",
+      "excerpt_sha256": "f50e88dae721ea4cd4659e7b8a386dc924a12fce6b87ee2aaca1a94581a1a26f",
+      "published_excerpt_sha256": "f50e88dae721ea4cd4659e7b8a386dc924a12fce6b87ee2aaca1a94581a1a26f",
+      "full_original_included": true
+    },
+    {
+      "original_path": "runs/full1/commonmark/B_1/ws/tests/visible_tests.json",
+      "original_sha256": "a1051629a976099cd17230ede0d968758487443543fb99a8f322c60421a9d657",
+      "selector": {
+        "json_pointer": "/185",
+        "example": 360,
+        "visibility": "visible"
+      },
+      "excerpt_path": "evidence/fig03-commonmark-visible.txt",
+      "excerpt_sha256": "8cd6751716ad8b0edd5e3507e02c012e9784d8c4eb524678287eaa2453f2a500",
+      "published_excerpt_sha256": "8cd6751716ad8b0edd5e3507e02c012e9784d8c4eb524678287eaa2453f2a500",
+      "full_original_included": false
+    },
+    {
+      "original_path": "tasks/swe1/task_prompt.md",
+      "original_sha256": "ede4f26730f782959bdaef63bb89711799cade7a9fa3acb5eba7f48794de938a",
+      "selector": {
+        "line_numbers": [
+          4,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          16
+        ],
+        "editorial_omitted_line_ranges": [
+          [
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            14
+          ]
+        ],
+        "visibility": "task prompt passed to agent"
+      },
+      "excerpt_path": "evidence/fig03-swe1-visible.txt",
+      "excerpt_sha256": "14f7d50f800e936a4c55ff8a557cda0984bed372c3a4998bc9e63aa3467a37e7",
+      "published_excerpt_sha256": "14f7d50f800e936a4c55ff8a557cda0984bed372c3a4998bc9e63aa3467a37e7",
+      "full_original_included": true
+    },
+    {
+      "original_path": "runs/full1/commonmark/Bx4_select/attempt1/output.md",
+      "original_sha256": "e74ad6c10541a2e06ac72994c8e8ceb7b375b9e2a2198b7c093f8277bc309f3b",
+      "selector": {
+        "line_numbers": [
+          2,
+          4
+        ]
+      },
+      "excerpt_path": "evidence/text-cm-selector-rationale.txt",
+      "excerpt_sha256": "d89c7a02f9bd384dd8e17d0ab227a22995248624651780c35de337619706376d",
+      "supports": "挑选员英文理由：第一条称 Attempt 1 分数最高；第三条写 Attempt 3 为 154/333、例 4 超时、HTML 块 0/22",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "d89c7a02f9bd384dd8e17d0ab227a22995248624651780c35de337619706376d",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/commonmark/Bx4_select/attempt1/input.md",
+      "original_sha256": "059b7bef650cecf43196255d3b190270a8e7321fd1927face4efcde93ea459fb",
+      "selector": {
+        "line_numbers": [
+          21,
+          25,
+          203,
+          207,
+          381,
+          385,
+          549,
+          553
+        ]
+      },
+      "excerpt_path": "evidence/text-cm-selector-order.txt",
+      "excerpt_sha256": "249630fbad86e3c1ef5deebe4e4f1b95aa02abfd4bec7e331ba4407b03aee82c",
+      "supports": "挑选员看到的四份记录按 B_1-B_4 顺序编为 Attempt 1-4，及各自可见通过数",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "249630fbad86e3c1ef5deebe4e4f1b95aa02abfd4bec7e331ba4407b03aee82c",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/commonmark/Bx4_select/done.json",
+      "original_sha256": "3db150b6abc31debf5e8edb6733a02b97f46291c833091160ab868b3a74b3560",
+      "selector": {
+        "json_pointers": [
+          "/out/choice",
+          "/out/best_visible"
+        ]
+      },
+      "excerpt_path": "evidence/text-cm-selector-done.txt",
+      "excerpt_sha256": "584471ddc4b166c26399ca636a170da50547927806c4c78af388e675c033e8e1",
+      "supports": "挑选结果 B_1；可见测试最高为 B_3",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "584471ddc4b166c26399ca636a170da50547927806c4c78af388e675c033e8e1",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/commonmark/B_1/visible_result.txt",
+      "original_sha256": "6336abf1963652e7a7abf6a872d00b02ba22a0d4f4ced64293795d5a53c9385d",
+      "selector": {
+        "line_numbers": [
+          1
+        ]
+      },
+      "excerpt_path": "evidence/text-cm-B_1-visible.txt",
+      "excerpt_sha256": "973e22c764a12f81fed9ea85407e543032453aabdb187a48bb0dc978d7139b9c",
+      "supports": "B_1 可见测试 142/333",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "973e22c764a12f81fed9ea85407e543032453aabdb187a48bb0dc978d7139b9c",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/commonmark/B_3/visible_result.txt",
+      "original_sha256": "d152b5ccda3f7533170724ea259f0cb0f492b940ff458e7e4d1519d85b5e22d3",
+      "selector": {
+        "line_numbers": [
+          1,
+          11,
+          29,
+          33
+        ]
+      },
+      "excerpt_path": "evidence/text-cm-B_3-visible.txt",
+      "excerpt_sha256": "0563565bee5384a73ca8134a34b8ce34f282d699dcb5b0d41979919dda6b9b70",
+      "supports": "B_3 可见测试 154/333、HTML 块 0/22、例 4 超时",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "0563565bee5384a73ca8134a34b8ce34f282d699dcb5b0d41979919dda6b9b70",
+      "full_original_included": false
+    },
+    {
+      "original_path": "runs/full1/swe2/Bx4_select/done.json",
+      "original_sha256": "03da21142aff66e8160465eb0be24c5f6a469e55e66a30a95b48bb4bfa0b1b99",
+      "selector": {
+        "json_pointers": [
+          "/out/choice"
+        ]
+      },
+      "excerpt_path": "evidence/text-swe2-selector-done.txt",
+      "excerpt_sha256": "20d4903c685466e4358c5abe360a124b163ecabedcee2e42f2327f409b11a302",
+      "supports": "swe2 挑选结果 B_4",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "20d4903c685466e4358c5abe360a124b163ecabedcee2e42f2327f409b11a302",
+      "full_original_included": false
+    },
+    {
+      "original_path": "run_full.py",
+      "original_sha256": "69a9452ac2b2ae1bd2671219b501fa4b663f29c2a75b70986061bf9bbcdbd611",
+      "selector": {
+        "line_numbers": [
+          52,
+          276,
+          288
+        ]
+      },
+      "excerpt_path": "evidence/text-run_full-select-order.txt",
+      "excerpt_sha256": "94d4d13bceef9a4f51a17bd2d553a2467def5d46039b455452703b7eefa1e59f",
+      "supports": "挑选员输入按 B_RUNS 固定顺序（B_1-B_4）编号为 Attempt 1-4，未打乱",
+      "added_by": "add_text_sources.py",
+      "published_excerpt_sha256": "94d4d13bceef9a4f51a17bd2d553a2467def5d46039b455452703b7eefa1e59f",
+      "full_original_included": true
+    }
+  ]
+}

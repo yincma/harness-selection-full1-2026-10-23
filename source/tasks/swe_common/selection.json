@@ -1,0 +1,16 @@
+{
+  "written_at": "2026-10-23T00:13:50+0900",
+  "written_before": "any dataset row, pool or candidate was downloaded or looked at",
+  "dataset": "princeton-nlp/SWE-bench_Verified",
+  "split": "test",
+  "revision": "the dataset commit SHA current at preparation time; recorded in tasks/swe1/grading_meta.json and tasks/swe2/grading_meta.json",
+  "rule": {
+    "filter": "repo == 'pytest-dev/pytest' and '```' in problem_statement",
+    "swe1_pool": "filter and difficulty == '15 min - 1 hour'",
+    "swe2_pool": "filter and difficulty == '1-4 hours'",
+    "order": "ids = sorted(instance_id of the pool) (Python sorted on the string); random.Random(seed).shuffle(ids)  -- one fresh Random(seed) per pool",
+    "pick": "walk ids in that order; the first instance that passes environment validation is the task; every instance tried before it is recorded with the reason it was skipped",
+    "environment_validation": "repo snapshot at base_commit (git archive, no .git), Python version from the SWE-bench harness spec for the instance's pytest version (uv-managed CPython), harness pip_packages + the repo installed editable; in a scratch copy: every FAIL_TO_PASS test fails (or is missing) before and passes after applying gold patch + test_patch; every PASS_TO_PASS test passes both before and after; tests run as the harness does (pytest -rA on the files touched by test_patch, statuses parsed from the -rA summary; PASSED/XFAIL = pass)"
+  },
+  "seed": 20261022
+}

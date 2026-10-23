@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>模型到底在解决什么问题？</title><style>
+    *{box-sizing:border-box}html,body{margin:0;background:#F6F5F0;color:#172D3D}
+    body{font-family:"Hiragino Sans GB","PingFang SC",sans-serif;width:1280px;padding:46px}
+    .kicker{font-size:22px;letter-spacing:2px;color:#526674;margin-bottom:12px}
+    h1{font-size:44px;line-height:1.25;margin:0 0 16px;font-weight:700}
+    .subtitle{font-size:24px;line-height:1.55;color:#526674;margin-bottom:27px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:#fff;border:1px solid #D9E0E1;border-top:6px solid var(--accent);padding:25px 26px 22px;min-width:0}
+    .card h2{font-size:30px;line-height:1.4;margin:0 0 8px;color:var(--accent)}
+    .card .sub{font-size:22px;line-height:1.5;color:#526674;margin-bottom:14px}
+    .record-label{font-size:20px;line-height:1.45;color:#526674;margin-bottom:8px}
+    pre{font-family:"Menlo","SFMono-Regular",monospace;font-size:23px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:#172D3D}
+    .record{padding:14px 0;border-top:1px solid #E5E8E7}
+    .record.compact pre{font-size:22px;line-height:1.5}
+    .note{font-size:22px;line-height:1.5;color:#526674;margin-top:10px}
+    .source{font-family:Menlo,monospace;font-size:17px;line-height:1.5;color:#637682;margin-top:14px;overflow-wrap:anywhere}
+    .footer{border-top:2px solid #172D3D;margin-top:28px;padding-top:19px;font-size:22px;line-height:1.65}
+    .tasks{display:grid;gap:24px}.task-card{padding:25px 30px;background:#fff;border:1px solid #D9E0E1;border-left:6px solid #007F91}
+    .task-card h2{font-size:29px;line-height:1.5;margin:0 0 10px}.task-card .sub{font-size:23px;line-height:1.5;color:#526674;margin-bottom:12px}
+    .task-card pre{font-size:23px;line-height:1.5}.boundary{background:#E8EEED;padding:23px 28px;font-size:24px;line-height:1.65;border-left:6px solid #172D3D}
+    </style><body><div class="kicker">FULL1 / CLAUDE-HAIKU-4.5 / 记录阅览</div><h1>模型到底在解决什么问题？</h1><div class="subtitle">正式实验实际输入节选 · 可见材料重开后截图 · 非原始运行时抓拍</div><div class="tasks">
+    <section class="task-card"><h2>短函数 / HumanEval/91 · is_bored</h2><div class="sub">模型可见：函数签名、docstring 与示例。交付：solution.py。</div><div class="record "><div class="record-label">连续原文：函数签名与完整 docstring</div><pre>def is_bored(S):
+    &quot;&quot;&quot;
+    You&#x27;ll be given a string of words, and your task is to count the number
+    of boredoms. A boredom is a sentence that starts with the word &quot;I&quot;.
+    Sentences are delimited by &#x27;.&#x27;, &#x27;?&#x27; or &#x27;!&#x27;.
+   
+    For example:
+    &gt;&gt;&gt; is_bored(&quot;Hello world&quot;)
+    0
+    &gt;&gt;&gt; is_bored(&quot;The sky is blue. The sun is shining. I love this weather&quot;)
+    1
+    &quot;&quot;&quot;</pre></div><div class="source">来源：tasks/humaneval/template/solution.py；[3] HumanEval</div></section>
+    <section class="task-card"><h2>规范实现 / CommonMark 0.31.2 · 可见例 360</h2><div class="sub">模型可见：这一例的 Markdown 与预期 HTML。交付：Markdown 转 HTML 程序。</div><div class="record "><div class="record-label">visible_tests.json 中的原始记录</div><pre>{
+  &quot;example&quot;: 360,
+  &quot;section&quot;: &quot;Emphasis and strong emphasis&quot;,
+  &quot;markdown&quot;: &quot;foo_bar_\n&quot;,
+  &quot;html&quot;: &quot;&lt;p&gt;foo_bar_&lt;/p&gt;\n&quot;
+}</pre></div><div class="source">来源：full1/commonmark/B_1/ws/tests/visible_tests.json<br>CommonMark Spec，CC-BY-SA 4.0；[6]</div></section>
+    <section class="task-card"><h2>仓库修复 / swe1 · pytest-dev__pytest-7571</h2><div class="sub">模型可见：原 issue 的复现片段及仓库。交付：repo/ 中的修复。</div><div class="record "><div class="record-label">原 issue 节选；跨行处含编者省略标记</div><pre>caplog fixture doesn&#x27;t restore log level after test
+…〔编者省略：原文件第 5–8 行〕
+def test_foo(caplog):
+    caplog.set_level(42)
+
+def test_bar(caplog):
+    print(caplog.handler.level)
+…〔编者省略：原文件第 14 行〕
+
+It prints &quot;0&quot; for pytest&lt;6, &quot;42&quot; after.</pre></div><div class="source">来源：tasks/swe1/task_prompt.md；[5] SWE-bench Verified<br>代码中的 0 / 42 为 issue 作者描述的现象，不是本次新增测量。</div></section>
+    <div class="boundary"><strong>交付后评分区</strong><br>HumanEval：官方隐藏检查。CommonMark：另 319 个隐藏例子。<br>swe1：注入 issue 评分测试，并检查 1 个待修测试与 14 个原有测试。<br>此处只说明评分口径，不展示隐藏测试内容或参考答案。</div></div><div class="footer">图中函数与规范示例来自可见输入；SWE 可读仓库现有测试，新增评分测试在交付后注入。<br>来源根目录：h2/tasks/ 与 h2/runs/full1/；定位与哈希见 evidence-index.md。</div></body></html>

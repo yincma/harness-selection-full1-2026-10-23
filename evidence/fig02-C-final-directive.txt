@@ -1,0 +1,1 @@
+**Core approach**: Work autonomously with frequent testing. Implement features incrementally, test after each major component, and refactor only when test progress plateaus.

@@ -1,0 +1,9 @@
+{
+  "state": "ok",
+  "status": "success",
+  "out": {
+    "choice": "B_1",
+    "by": "selector",
+    "best_visible": "B_1"
+  }
+}

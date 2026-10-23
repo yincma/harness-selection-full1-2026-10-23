@@ -1,0 +1,5 @@
+state: ok
+status: success
+tool_calls: 0
+out.files_written:
+  ["jsonschema_impl.py"]

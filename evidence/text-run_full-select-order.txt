@@ -1,0 +1,3 @@
+52: B_RUNS = [f"B_{i}" for i in range(1, N_BX + 1)]
+276:         usable = [b for b in B_RUNS if self.ok(f"{task.id}/{b}")]
+288:         blocks = [self.run_block(task, b, f"Attempt {i}", None, 25000) for i, b in enumerate(usable, 1)]

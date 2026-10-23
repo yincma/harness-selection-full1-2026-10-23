@@ -1,0 +1,10 @@
+caplog fixture doesn't restore log level after test
+…〔编者省略：原文件第 5–8 行〕
+def test_foo(caplog):
+    caplog.set_level(42)
+
+def test_bar(caplog):
+    print(caplog.handler.level)
+…〔编者省略：原文件第 14 行〕
+
+It prints "0" for pytest<6, "42" after.

@@ -1,0 +1,102 @@
+{
+  "prepared_at": "2026-10-23T00:26:18+0900",
+  "task": "swe2",
+  "dataset": "princeton-nlp/SWE-bench_Verified",
+  "split": "test",
+  "dataset_revision": "c104f840cc67f8b6eec6f759ebc8b2693d585d4a",
+  "parquet_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data/test-00000-of-00001.parquet",
+  "parquet_sha256": "a45b1fe4e2f0c8390b2b2938ac83e92ed5979000856808f3679c07812e9e6dcd",
+  "instance_id": "pytest-dev__pytest-10356",
+  "repo": "pytest-dev/pytest",
+  "base_commit": "3c1534944cbd34e8a41bc9e76818018fadefc9a1",
+  "version": "7.2",
+  "difficulty": "1-4 hours",
+  "sha256": {
+    "patch": "99d679e52efb6f3a8e9370d597653996c8866ab086935e187d469dafe86e76a2",
+    "test_patch": "547d6960987bcf7820991b7c56d3c7245275789ab0f1cb352e7d1486d2fe9d79",
+    "FAIL_TO_PASS": "11953efb305105873eef822293933d1b56861eaf375b7a89319be7822ed8e30c",
+    "PASS_TO_PASS": "aef451fb09f9d0a19a0c215d0d49db171ac6ec32e954ae4c0603e6c2d9f0a585",
+    "problem_statement": "04324b4ba13d4d4a7c28e790561dc0927851fc39eb3d245b2e688bb6a0de3174"
+  },
+  "counts": {
+    "fail_to_pass": 1,
+    "pass_to_pass": 79,
+    "test_patch_files": 1
+  },
+  "selection": {
+    "rule_file": "tasks/swe_common/selection.json",
+    "rule": {
+      "filter": "repo == 'pytest-dev/pytest' and '```' in problem_statement",
+      "swe1_pool": "filter and difficulty == '15 min - 1 hour'",
+      "swe2_pool": "filter and difficulty == '1-4 hours'",
+      "order": "ids = sorted(instance_id of the pool) (Python sorted on the string); random.Random(seed).shuffle(ids)  -- one fresh Random(seed) per pool",
+      "pick": "walk ids in that order; the first instance that passes environment validation is the task; every instance tried before it is recorded with the reason it was skipped",
+      "environment_validation": "repo snapshot at base_commit (git archive, no .git), Python version from the SWE-bench harness spec for the instance's pytest version (uv-managed CPython), harness pip_packages + the repo installed editable; in a scratch copy: every FAIL_TO_PASS test fails (or is missing) before and passes after applying gold patch + test_patch; every PASS_TO_PASS test passes both before and after; tests run as the harness does (pytest -rA on the files touched by test_patch, statuses parsed from the -rA summary; PASSED/XFAIL = pass)"
+    },
+    "seed": 20261022,
+    "pool_order": [
+      "pytest-dev__pytest-10356",
+      "pytest-dev__pytest-5787",
+      "pytest-dev__pytest-6197"
+    ],
+    "skipped": [],
+    "chosen": "pytest-dev__pytest-10356"
+  },
+  "validation": {
+    "unmodified": {
+      "resolved": false,
+      "f2p_passed": 0,
+      "f2p_total": 1,
+      "p2p_passed": 79,
+      "p2p_total": 79,
+      "p2p_failed_idx": [],
+      "seconds": 1.2,
+      "setup_s": 0.4,
+      "venv": "reused",
+      "timed_out": false,
+      "note": "repo unchanged (no deliverable)"
+    },
+    "gold": {
+      "resolved": true,
+      "f2p_passed": 1,
+      "f2p_total": 1,
+      "p2p_passed": 79,
+      "p2p_total": 79,
+      "p2p_failed_idx": [],
+      "seconds": 1.2,
+      "setup_s": 0.4,
+      "venv": "reused",
+      "timed_out": false,
+      "note": null
+    }
+  },
+  "harness": {
+    "commit": "726c5461e2ef52d83cf1ea2107870a8bb3328d57",
+    "file": "https://raw.githubusercontent.com/SWE-bench/SWE-bench/726c5461e2ef52d83cf1ea2107870a8bb3328d57/swebench/harness/constants/python.py",
+    "file_sha256": "ce4f0e0f0939745944d84c51356530f5da57f486ac839523556d7ffdb2f9072b",
+    "python": "3.9",
+    "install": "python -m pip install -e .",
+    "test_cmd": "pytest -rA",
+    "pip_packages": [
+      "attrs==23.1.0",
+      "iniconfig==2.0.0",
+      "packaging==23.1",
+      "pluggy==0.13.1",
+      "py==1.11.0",
+      "tomli==2.0.1"
+    ],
+    "pre_install": null
+  },
+  "environment": {
+    "python": "3.9.25",
+    "build_tools": [
+      "setuptools==68.0.0",
+      "setuptools-scm==8.1.0",
+      "wheel==0.44.0"
+    ],
+    "scm_version": "7.2.0.dev312+g3c1534944",
+    "uv": "uv 0.12.0 (b88d7c5c4 2026-07-28 aarch64-apple-darwin)",
+    "snapshot": "git archive 3c1534944cbd34e8a41bc9e76818018fadefc9a1 of https://github.com/pytest-dev/pytest.git (no .git)",
+    "note": "harness differences: uv-managed CPython on macOS instead of conda on Linux; repo installed editable with --no-build-isolation, so setuptools / setuptools-scm / wheel are in the venv; exact pins in env_spec.json"
+  }
+}

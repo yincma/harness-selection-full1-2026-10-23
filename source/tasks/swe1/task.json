@@ -1,0 +1,47 @@
+{
+  "id": "swe1",
+  "title": "SWE-bench Verified pytest-dev__pytest-7571 (15 min - 1 hour): caplog fixture doesn't restore log level after test",
+  "tier": "repo",
+  "template": "template",
+  "task_prompt": "task_prompt.md",
+  "direct_prompt": "direct_prompt.md",
+  "direct_output": {
+    "mode": "files",
+    "prefixes": [
+      "repo/"
+    ]
+  },
+  "guard": {
+    "write_files": [
+      "NOTES.md"
+    ],
+    "write_dirs": [
+      "repo",
+      "scratch"
+    ],
+    "shell": [
+      "\\./run_tests\\.sh( [A-Za-z0-9_.,:=/@+-]+)*",
+      "\\./run_py\\.sh scratch/[A-Za-z0-9_./-]+\\.py",
+      "\\./search\\.sh [A-Za-z0-9_.,:=/@+-]+( [A-Za-z0-9_./-]+)?",
+      "ls( -[a-zA-Z]+)?( [A-Za-z0-9_./-]+)?"
+    ],
+    "shell_help": "only ./run_tests.sh <pytest args>, ./run_py.sh scratch/<file>.py, ./search.sh <text> [<dir>] and ls [<dir>] are allowed, with plain-word arguments"
+  },
+  "setup": [
+    "{py}",
+    "{task_dir}/../swe_common/setup_ws.py",
+    "{task_dir}",
+    "{ws}",
+    "{run_dir}"
+  ],
+  "visible": null,
+  "grader": [
+    "{py}",
+    "{task_dir}/grade_task.py",
+    "{task_runs}"
+  ],
+  "metric": {
+    "score": "resolved (every FAIL_TO_PASS and PASS_TO_PASS test passes) = 100, else 0",
+    "secondary": "FAIL_TO_PASS tests passed, % of 1"
+  }
+}

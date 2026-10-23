@@ -1,0 +1,3 @@
+```python
+[其间导入行省略]
+def is_valid(schema: Any, instance: Any) -> bool:

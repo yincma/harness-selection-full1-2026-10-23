@@ -1,0 +1,1 @@
+2. **Design before coding**: For complex tasks, write or outline a design that covers:

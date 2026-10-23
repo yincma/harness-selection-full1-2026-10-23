@@ -1,0 +1,28 @@
+{
+  "prepared_at": "2026-10-23T00:10:00+0900",
+  "source_repo": "https://github.com/openai/human-eval",
+  "commit": "b9453e8f1865df0a0057a1383767caa400acfbcf",
+  "file": "data/HumanEval.jsonl.gz",
+  "url": "https://raw.githubusercontent.com/openai/human-eval/b9453e8f1865df0a0057a1383767caa400acfbcf/data/HumanEval.jsonl.gz",
+  "selection": {
+    "rule": "Keep problems whose 'prompt' contains at least two '>>>' doctest examples (prompt.count('>>>') >= 2). Sort the kept task_ids (Python sorted on the string), shuffle that list with random.Random(seed).shuffle, take the first one.",
+    "seed": 20261022
+  },
+  "sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef",
+  "n_problems": 164,
+  "n_kept": 58,
+  "shuffled_first_5": [
+    "HumanEval/91",
+    "HumanEval/3",
+    "HumanEval/23",
+    "HumanEval/60",
+    "HumanEval/43"
+  ],
+  "chosen": {
+    "task_id": "HumanEval/91",
+    "entry_point": "is_bored",
+    "prompt_sha256": "9445e82177f062459a801e24909bc856435701d82f1d67a9dad1f9d6fd0f6362",
+    "n_visible_examples": 2
+  },
+  "hidden_check": "the problem's `test` + check(entry_point), run with python3 -E -s -S, 10 s limit; score 100 if it passes, else 0"
+}

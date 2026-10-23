@@ -1,0 +1,4 @@
+1: Passed 154/333 (46.2%)
+11:   HTML blocks: 0/22
+29: --- Example 4 [Tabs]
+33: stderr:   TIMEOUT

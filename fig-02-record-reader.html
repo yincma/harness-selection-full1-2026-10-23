@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=1280"><title>同一道 JSON Schema 题，四组实际做了什么？</title><style>
+    *{box-sizing:border-box}html,body{margin:0;background:#F6F5F0;color:#172D3D}
+    body{font-family:"Hiragino Sans GB","PingFang SC",sans-serif;width:1280px;padding:46px}
+    .kicker{font-size:22px;letter-spacing:2px;color:#526674;margin-bottom:12px}
+    h1{font-size:44px;line-height:1.25;margin:0 0 16px;font-weight:700}
+    .subtitle{font-size:24px;line-height:1.55;color:#526674;margin-bottom:27px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:#fff;border:1px solid #D9E0E1;border-top:6px solid var(--accent);padding:25px 26px 22px;min-width:0}
+    .card h2{font-size:30px;line-height:1.4;margin:0 0 8px;color:var(--accent)}
+    .card .sub{font-size:22px;line-height:1.5;color:#526674;margin-bottom:14px}
+    .record-label{font-size:20px;line-height:1.45;color:#526674;margin-bottom:8px}
+    pre{font-family:"Menlo","SFMono-Regular",monospace;font-size:23px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;color:#172D3D}
+    .record{padding:14px 0;border-top:1px solid #E5E8E7}
+    .record.compact pre{font-size:22px;line-height:1.5}
+    .note{font-size:22px;line-height:1.5;color:#526674;margin-top:10px}
+    .source{font-family:Menlo,monospace;font-size:17px;line-height:1.5;color:#637682;margin-top:14px;overflow-wrap:anywhere}
+    .footer{border-top:2px solid #172D3D;margin-top:28px;padding-top:19px;font-size:22px;line-height:1.65}
+    .tasks{display:grid;gap:24px}.task-card{padding:25px 30px;background:#fff;border:1px solid #D9E0E1;border-left:6px solid #007F91}
+    .task-card h2{font-size:29px;line-height:1.5;margin:0 0 10px}.task-card .sub{font-size:23px;line-height:1.5;color:#526674;margin-bottom:12px}
+    .task-card pre{font-size:23px;line-height:1.5}.boundary{background:#E8EEED;padding:23px 28px;font-size:24px;line-height:1.65;border-left:6px solid #172D3D}
+    </style><body><div class="kicker">FULL1 / CLAUDE-HAIKU-4.5 / 记录阅览</div><h1>同一道 JSON Schema 题，四组实际做了什么？</h1><div class="subtitle">历史记录只读重开截图 · 字段与工具事件节选 · 非原始运行时抓拍</div><div class="grid"><section class="card" style="--accent:#596F83"><h2>A / 一次直接回答</h2><div class="sub">回复 → 解析成交付文件</div><div class="record "><div class="record-label">A_direct/done.json · 字段节选</div><pre>state: ok
+status: success
+tool_calls: 0
+out.files_written:
+  [&quot;jsonschema_impl.py&quot;]</pre></div><div class="record compact"><div class="record-label">回复中的代码围栏与函数签名</div><pre>```python
+[其间导入行省略]
+def is_valid(schema: Any, instance: Any) -&gt; bool:</pre></div><div class="source">jsonschema/A_direct/run/run.json<br>jsonschema/A_direct/done.json</div></section><section class="card" style="--accent:#007F91"><h2>B / 固定 harness · B_1</h2><div class="sub">创建 → 测试 → 修改 → 再测试</div><div class="record compact"><div class="record-label">events.jsonl · tool_call.title 节选</div><pre>Reading listing ., listing spec
+Creating jsonschema_impl.py
+Running: ./run_tests.sh --max-fail 5
+Editing jsonschema_impl.py
+Running: ./run_tests.sh</pre></div><div class="record compact"><div class="record-label">B_1/done.json · 字段节选</div><pre>{
+  &quot;state&quot;: &quot;ok&quot;,
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;tool_calls&quot;: 68
+}</pre></div><div class="note">可见测试：Passed 637/656 test cases (97.1%) in 43 file(s)</div><div class="source">jsonschema/B_1/run/events.jsonl<br>jsonschema/B_1/visible_result.txt</div></section><section class="card" style="--accent:#AD7100"><h2>Bx4 / 四份候选 → 挑选</h2><div class="sub">同一固定配置，独立执行</div><div class="record compact"><div class="record-label">四份 done.json · 执行状态</div><pre>B_1  state=ok  status=success
+B_2  state=ok  status=success
+B_3  state=ok  status=success
+B_4  state=ok  status=success</pre></div><div class="record "><div class="record-label">Bx4_select/done.json · out.choice</div><pre>{
+  &quot;choice&quot;: &quot;B_1&quot;
+}</pre></div><div class="note">selector 已完成；选择结果为 B_1。<br>挑选输入不包含隐藏评分。</div><div class="source">jsonschema/B_1 … B_4/done.json<br>jsonschema/Bx4_select/done.json</div></section><section class="card" style="--accent:#A6435C"><h2>C / H²-lite · 各阶段</h2><div class="sub">参考执行复用 B_1；最终重新执行</div><div class="record compact"><div class="record-label">阶段与 state；tools 为工具调用计数</div><pre>C_propose  state=ok
+C_probe_general  state=ok; tools=93
+C_probe_specific  state=ok; tools=93
+C_compose  state=ok
+C_final  state=ok; tools=89</pre></div><div class="record compact"><div class="record-label">提出产物中的一条新指令（GENERAL）</div><pre>2. **Design before coding**: For complex tasks, write or outline a design that covers:</pre></div><div class="record compact"><div class="record-label">合成后的最终提示节选</div><pre>**Core approach**: Work autonomously with frequent testing. Implement features incrementally, test after each major component, and refactor only when test progress plateaus.</pre></div><div class="source">jsonschema/C_*/done.json<br>C_propose、C_compose/attempt1/output.md</div></section></div><div class="footer">编辑标注与原始字段分开展示；未复制模型思考或改写字段值。<br>state=ok / status=success 表示运行完成，隐藏评分另见表 2。面板不展示分组调用积分。<br>来源根目录：h2/runs/full1/；完整路径、哈希与节选定位见 evidence-index.md。</div></body></html>

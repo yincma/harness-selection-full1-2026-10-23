@@ -1,0 +1,496 @@
+{
+  "task": "jsonschema",
+  "rule_written_at": "2026-10-23T00:11:30+0900",
+  "suite_repo": "https://github.com/json-schema-org/JSON-Schema-Test-Suite",
+  "commit_rule": "the commit at the tip of the default branch (main) of json-schema-org/JSON-Schema-Test-Suite at preparation time, read with git ls-remote; pinned below as suite_commit",
+  "files_rule": "tests/draft2020-12/*.json, top-level files only (the optional/ directory is not used), excluding refRemote.json",
+  "exclusion_rule": "a test group (one top-level array entry of a file) is excluded when json.dumps(group) contains 'localhost:1234', or when any '$ref' or '$dynamicRef' value anywhere in its schema (recursive walk over dicts and lists) is a string starting with 'https://json-schema.org/'",
+  "split_rule": "per file, keep the remaining groups in file order, then random.Random('20261022:' + file_name).shuffle(list_of_group_indices); the first ceil(n/2) shuffled indices are visible, the rest hidden. A test case is one entry of a group's 'tests' list; scores count test cases.",
+  "split_seed": "20261022:<file_name>",
+  "score": "hidden test cases passed, % of all hidden test cases",
+  "secondary": "visible test cases passed, % of all visible test cases",
+  "prepared_at": "2026-10-23T00:20:35+0900",
+  "suite_commit": "89e83a74014617ffbe79a56d83d14d054cd11417",
+  "tarball_url": "https://codeload.github.com/json-schema-org/JSON-Schema-Test-Suite/tar.gz/89e83a74014617ffbe79a56d83d14d054cd11417",
+  "note_tarball": "the tarball itself is not hash-checked (GitHub may re-compress it); every used file inside it is",
+  "license_sha256": "837402bd25fad9b704265801ca3f92566a98157c1f9a7acd6f446299ba1c305a",
+  "spec": {
+    "draft-bhutton-json-schema-01.txt": {
+      "url": "https://www.ietf.org/archive/id/draft-bhutton-json-schema-01.txt",
+      "sha256": "03834e2a60caff313476df9913dac2ccf9a34aad569df570f8ab80db7bd6d24a",
+      "chars": 162227
+    },
+    "draft-bhutton-json-schema-validation-01.txt": {
+      "url": "https://www.ietf.org/archive/id/draft-bhutton-json-schema-validation-01.txt",
+      "sha256": "1f8832490b4b8a5876b9f571afce4051a5ccbae2811220d70f8e86c3c08da414",
+      "chars": 64328
+    }
+  },
+  "files": {
+    "additionalProperties.json": {
+      "sha256": "b96bd533416386ac6421737b48c5c072870ab5dbea910585e9e8fa6305c7ca91",
+      "groups_in_file": 9,
+      "groups_excluded": 0,
+      "groups_visible": 5,
+      "groups_hidden": 4,
+      "cases_visible": 10,
+      "cases_hidden": 11,
+      "visible_file_sha256": "cceb312bfd56fe5dd0ed6ff64ed3177d0031ab4317e1ad9791c964b476c176b0"
+    },
+    "allOf.json": {
+      "sha256": "81045b06706a28f6aa337b485b41a764098e10ac73bb1d346ba0a4285a63e970",
+      "groups_in_file": 12,
+      "groups_excluded": 0,
+      "groups_visible": 6,
+      "groups_hidden": 6,
+      "cases_visible": 17,
+      "cases_hidden": 13,
+      "visible_file_sha256": "f6bd14e5a917da46c12b3c2d2502996230edd7089448e773a83f3f5735db5cd6"
+    },
+    "anchor.json": {
+      "sha256": "6f60e0782be6072733701459684cadf3741ddd60d96b14698b4d9a19075e9f1e",
+      "groups_in_file": 4,
+      "groups_excluded": 3,
+      "groups_visible": 1,
+      "groups_hidden": 0,
+      "cases_visible": 2,
+      "cases_hidden": 0,
+      "visible_file_sha256": "f61e5a63d1cbdd2a369542c560dad491da67fb57bc14bb2863e5e5c012eb6d9f"
+    },
+    "anyOf.json": {
+      "sha256": "7a6fe41602496c256334ffa3e6fb457b26ac23b97ca03cb16b724ad21a7d216d",
+      "groups_in_file": 8,
+      "groups_excluded": 0,
+      "groups_visible": 4,
+      "groups_hidden": 4,
+      "cases_visible": 10,
+      "cases_hidden": 8,
+      "visible_file_sha256": "8a33347c4bd38f70b01ac0f77995c23fb46eb0b58e275b7714cbb00dae3b81fa"
+    },
+    "boolean_schema.json": {
+      "sha256": "9c8828d325b88a0c632fca22405d5481548b49fb0f9f5536ee401e4d66aa8582",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 9,
+      "cases_hidden": 9,
+      "visible_file_sha256": "88e62615866075be310187375cc56ce8a1911759ebfcd0c837fabfb4ca42cef0"
+    },
+    "const.json": {
+      "sha256": "83a148d2589cbd211e7e64b31763290f8869d763f513de4658e8d25f0fcc025e",
+      "groups_in_file": 17,
+      "groups_excluded": 0,
+      "groups_visible": 9,
+      "groups_hidden": 8,
+      "cases_visible": 27,
+      "cases_hidden": 27,
+      "visible_file_sha256": "d3dbe915f93662205fc488e4f2770c33e243274f289614a5ae186ead4ce6e1ed"
+    },
+    "contains.json": {
+      "sha256": "086782fc8b54ac77a4a2afe8b84f8cc7fc9ca7b22473ebd8db3480f2eb8d0ab6",
+      "groups_in_file": 7,
+      "groups_excluded": 0,
+      "groups_visible": 4,
+      "groups_hidden": 3,
+      "cases_visible": 13,
+      "cases_hidden": 8,
+      "visible_file_sha256": "5d6905ae31cacbf89d027d38e14e0d7f722c81c0d503020fcba12c0e425d3ff4"
+    },
+    "content.json": {
+      "sha256": "9b08c408d32cf64f1966aa300cc246355799d883ed278a61d720493f61711bab",
+      "groups_in_file": 4,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 2,
+      "cases_visible": 12,
+      "cases_hidden": 6,
+      "visible_file_sha256": "551859170de6943252c43421994da29b9a71aa1cddac114303e7fafc01eec330"
+    },
+    "default.json": {
+      "sha256": "db4a8382727f6c687a0fc7bb24347e010c3fcfabd1207150ce025e1a763f6094",
+      "groups_in_file": 3,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 1,
+      "cases_visible": 4,
+      "cases_hidden": 3,
+      "visible_file_sha256": "f7db4da4f33d7f590148563a27a96ffb05fb223c651fc91dc0c277a5556db428"
+    },
+    "defs.json": {
+      "sha256": "5a352f0b1ad9aa906758fa4d363a77c4c4b29cfc193e8d6f7ab1e184be2a75d5",
+      "groups_in_file": 1,
+      "groups_excluded": 1,
+      "groups_visible": 0,
+      "groups_hidden": 0,
+      "cases_visible": 0,
+      "cases_hidden": 0
+    },
+    "dependentRequired.json": {
+      "sha256": "0824c393115498ac1a62551c3174a3ccd54ee4ef323d5eb9de0dfe3a185ad666",
+      "groups_in_file": 4,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 2,
+      "cases_visible": 9,
+      "cases_hidden": 11,
+      "visible_file_sha256": "3a5c4ce3d9432527a03ef446c07be037ce6a98ce98fb3b0279b3a577a119dce3"
+    },
+    "dependentSchemas.json": {
+      "sha256": "f77df8d5243c0f58e04053a14a30706f5a6d5a9e7eccbfd17f8d6445841f8752",
+      "groups_in_file": 4,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 2,
+      "cases_visible": 8,
+      "cases_hidden": 12,
+      "visible_file_sha256": "701921b69a280bb6f2a0c88df5a1a5a08af60783807912eb63e160f6f65a37a5"
+    },
+    "dynamicRef.json": {
+      "sha256": "dd763124c3d1432977b9c276bf682fa746f82a69b1d9bbc1d79fbdb2a3dda5e4",
+      "groups_in_file": 21,
+      "groups_excluded": 5,
+      "groups_visible": 8,
+      "groups_hidden": 8,
+      "cases_visible": 18,
+      "cases_hidden": 13,
+      "visible_file_sha256": "b28af378b5d6731c1bcee3746a46ad31fea24f6b46f3639420bca7e85a11f235"
+    },
+    "enum.json": {
+      "sha256": "1abe7eb883bde4a78c62f08e484e16f32b72ca5c1be725aa54d85cc4546b5031",
+      "groups_in_file": 16,
+      "groups_excluded": 0,
+      "groups_visible": 8,
+      "groups_hidden": 8,
+      "cases_visible": 29,
+      "cases_hidden": 24,
+      "visible_file_sha256": "f8c2808060c78698ff669d2016c5b69385989917b04590abcfa22d72a2ceb9c9"
+    },
+    "exclusiveMaximum.json": {
+      "sha256": "e37fc110c48e2a9de564579ceba3e8ab098a36f904dcc1ef02f8cf7b59dc0473",
+      "groups_in_file": 1,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 0,
+      "cases_visible": 4,
+      "cases_hidden": 0,
+      "visible_file_sha256": "e37fc110c48e2a9de564579ceba3e8ab098a36f904dcc1ef02f8cf7b59dc0473"
+    },
+    "exclusiveMinimum.json": {
+      "sha256": "0395a2423606d07943d3d355d1c9c4a474cc7cb544d3c8f266ceab801c5f0a6d",
+      "groups_in_file": 1,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 0,
+      "cases_visible": 4,
+      "cases_hidden": 0,
+      "visible_file_sha256": "0395a2423606d07943d3d355d1c9c4a474cc7cb544d3c8f266ceab801c5f0a6d"
+    },
+    "format.json": {
+      "sha256": "3baf934e2aeace523012f92994e3c9f4b6142d68ba9ece0c12becaffa52eaf5f",
+      "groups_in_file": 19,
+      "groups_excluded": 0,
+      "groups_visible": 10,
+      "groups_hidden": 9,
+      "cases_visible": 70,
+      "cases_hidden": 63,
+      "visible_file_sha256": "8fcf108e9d6ab0f0f06f4d692b7d08ae979ac4f5b4842cd3c713a5c627989109"
+    },
+    "if-then-else.json": {
+      "sha256": "c7bf0da8432427d9da38b11ccccd84473137893d4a93109e63751118402fef09",
+      "groups_in_file": 12,
+      "groups_excluded": 0,
+      "groups_visible": 6,
+      "groups_hidden": 6,
+      "cases_visible": 14,
+      "cases_hidden": 16,
+      "visible_file_sha256": "d6afd1dd43f52737d292af0c3fd3853e1f25778e28289dd6cd2f8cbbb5860fa4"
+    },
+    "infinite-loop-detection.json": {
+      "sha256": "9fffe850049048a0e411133f7e5fec347f97c077bde65b34c67dadf96e046bcc",
+      "groups_in_file": 1,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 0,
+      "cases_visible": 2,
+      "cases_hidden": 0,
+      "visible_file_sha256": "fd22db56e84f793a55e398aa0ee6b2dc634e26552829a04f4bf57eb26a16d7fc"
+    },
+    "items.json": {
+      "sha256": "d924a8171f1f1d04ff026a4e3491d1376297145563158543005b7073b69ab913",
+      "groups_in_file": 10,
+      "groups_excluded": 0,
+      "groups_visible": 5,
+      "groups_hidden": 5,
+      "cases_visible": 17,
+      "cases_hidden": 12,
+      "visible_file_sha256": "ded929b1de5231a2a674c676b614414fccdfd50b68f28ea072728636b8745279"
+    },
+    "maxContains.json": {
+      "sha256": "2d7cf7557b87b15a08457badc66905593834bbdda98f325a22d136dfdefe81ed",
+      "groups_in_file": 5,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 2,
+      "cases_visible": 7,
+      "cases_hidden": 7,
+      "visible_file_sha256": "83525e24031347ff7442286a32c6bc3871ff39db370c45c9359c637e2cf07e82"
+    },
+    "maxItems.json": {
+      "sha256": "59fa6236c0766aaac5fb7c9ef82e205c230efa94271485f614218291be7cbc5c",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 4,
+      "cases_hidden": 2,
+      "visible_file_sha256": "5bb6358c280c0a1374f221a3201ffe8a6c07fbfe3c3093b37c513855f890a458"
+    },
+    "maxLength.json": {
+      "sha256": "ac43a3991586f2d2d1e7e37cad01bb1a7b1c5d9ad7b558d6029d24b41a04d1a9",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 5,
+      "cases_hidden": 2,
+      "visible_file_sha256": "dbc6fbe1c373a2608529b02292ebaae605d7255bafe1b416dcad722f9c742a3c"
+    },
+    "maxProperties.json": {
+      "sha256": "4f1d14ac74862f134e6769884a7e72d47328daf91e2c6b475ae5f99891e3477d",
+      "groups_in_file": 3,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 1,
+      "cases_visible": 8,
+      "cases_hidden": 2,
+      "visible_file_sha256": "b60143a575d99de8778f28c878062bedf2f17eaad05c2896f1785395aedd2eed"
+    },
+    "maximum.json": {
+      "sha256": "dfbc88ef4ede2966250fb2ad44076856d51481ea01ce679cca70efe47606ee90",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 4,
+      "cases_hidden": 4,
+      "visible_file_sha256": "0e7cc05ae12b577194895de55de19d4077edbd853aee1eb974858a99eeb2a782"
+    },
+    "minContains.json": {
+      "sha256": "2aca05e48dbdf605fe14c775f5470061cf4c8b679e3e6a955a18334ea97d3c23",
+      "groups_in_file": 8,
+      "groups_excluded": 0,
+      "groups_visible": 4,
+      "groups_hidden": 4,
+      "cases_visible": 14,
+      "cases_hidden": 14,
+      "visible_file_sha256": "4bbf2ea2d44937f7ef00a7578f5c1f069a18fed4d650fdd323dcdb175ec2c23b"
+    },
+    "minItems.json": {
+      "sha256": "9792cedc446be654836b42d0312eca12051e9e2f24cd5d95dcd3f3fc9adccd0a",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 2,
+      "cases_hidden": 4,
+      "visible_file_sha256": "d45edb5c5bf6d718c88ee189ab8f2ee0ce7b4ab81f5bd133a780feb5744e2c17"
+    },
+    "minLength.json": {
+      "sha256": "999e9731c57a1296e06e8b9b36b0531614ab7a6ac3c20db6fed50badbf3850ab",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 5,
+      "cases_hidden": 2,
+      "visible_file_sha256": "31afd0e68bedfa20ce97413cdc3e7fbdf35c960a494d8687696766579e933290"
+    },
+    "minProperties.json": {
+      "sha256": "00f641408d1dc3ff81743e0c730eb430ff818e3bbe37007a64138bd513ade05a",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 8,
+      "cases_hidden": 2,
+      "visible_file_sha256": "4bd5b0623300e1afd941829510fcdf7894b77d8684aa4c1f3654b0813195b235"
+    },
+    "minimum.json": {
+      "sha256": "f6a29cb574b76621da23636a636cf12cb31b01646b89543e6ce1a813376439a3",
+      "groups_in_file": 2,
+      "groups_excluded": 0,
+      "groups_visible": 1,
+      "groups_hidden": 1,
+      "cases_visible": 4,
+      "cases_hidden": 7,
+      "visible_file_sha256": "2b41b8d5230ca82a1d5119de7546da6b164ba7b91df6dad2cb564bf563b18110"
+    },
+    "multipleOf.json": {
+      "sha256": "ada35b586efe55186d35d8888a4e4954724c313253b59bd47ec03637a44cb4ad",
+      "groups_in_file": 5,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 2,
+      "cases_visible": 7,
+      "cases_hidden": 4,
+      "visible_file_sha256": "0f2daf7045cbef7a21f64fbcd38980cf3f8fa9e7bd72448da158186e764034c9"
+    },
+    "not.json": {
+      "sha256": "1fd6ef263efd365680c6aaf8f23aa5430d7b9f80b84f46b1208b1ed8353c28b4",
+      "groups_in_file": 9,
+      "groups_excluded": 0,
+      "groups_visible": 5,
+      "groups_hidden": 4,
+      "cases_visible": 19,
+      "cases_hidden": 21,
+      "visible_file_sha256": "40914644a9d60ea048ad1a3915354767d5446eb7c322cf24577446facb626b2b"
+    },
+    "oneOf.json": {
+      "sha256": "a8d80a786d07769cb9b8b9a8903ca4f7aa564446ae6b781c7f7f6ffea11ed363",
+      "groups_in_file": 11,
+      "groups_excluded": 0,
+      "groups_visible": 6,
+      "groups_hidden": 5,
+      "cases_visible": 15,
+      "cases_hidden": 12,
+      "visible_file_sha256": "58c481b9ac30037d45c9fc58d15fee376211767239cf97fc70ee40929a5af075"
+    },
+    "pattern.json": {
+      "sha256": "60713a3b01957fad54f00ab30b378463b3e07b35242c945a9325f8d6ae7080fc",
+      "groups_in_file": 3,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 1,
+      "cases_visible": 11,
+      "cases_hidden": 1,
+      "visible_file_sha256": "53618903f43aec85c06a23deebd5b82bad87b6b13b0fd1d1f9116d4e5cd95cdd"
+    },
+    "patternProperties.json": {
+      "sha256": "aa73ad1e6eac3cee42bc79628f86d813ec80a88c432f62bfca8add91326dd924",
+      "groups_in_file": 6,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 3,
+      "cases_visible": 18,
+      "cases_hidden": 8,
+      "visible_file_sha256": "055ea6a2dba4fd35e1865dbb172bffbb335d5b0af7a9d3c351e353ba22a67d84"
+    },
+    "prefixItems.json": {
+      "sha256": "5b2006fb0d99f9df8e25e384d665edc57427e7849ac0f963f541626fd82bb522",
+      "groups_in_file": 4,
+      "groups_excluded": 0,
+      "groups_visible": 2,
+      "groups_hidden": 2,
+      "cases_visible": 4,
+      "cases_hidden": 7,
+      "visible_file_sha256": "1f6aa14f89136e37102b6e8794813820b9bcf2050a42b47c85abffc76a7dd284"
+    },
+    "properties.json": {
+      "sha256": "58f01566cfe3e1fc4fb851d3b2eab13768d65ba5dbc4e9f9387ceaf4244a0522",
+      "groups_in_file": 6,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 3,
+      "cases_visible": 7,
+      "cases_hidden": 21,
+      "visible_file_sha256": "bbec7b126e0e434dfab348b567cd1157a3d4626106b9fc4072c1612780df1e9f"
+    },
+    "propertyNames.json": {
+      "sha256": "54469f831102465060d0db9a9611e827fb7e87df38179d8a28ac45c10576ef83",
+      "groups_in_file": 6,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 3,
+      "cases_visible": 7,
+      "cases_hidden": 15,
+      "visible_file_sha256": "831163b2b6bedd68f82ad02fd547b2bbb0cc1d0ccf25077cc42ce1068493f1a9"
+    },
+    "ref.json": {
+      "sha256": "ae53f3f57c220879729225eb416cecac909f06b5adaf15f799b4f3e7c0612998",
+      "groups_in_file": 36,
+      "groups_excluded": 2,
+      "groups_visible": 17,
+      "groups_hidden": 17,
+      "cases_visible": 40,
+      "cases_hidden": 35,
+      "visible_file_sha256": "fbdee1612bf4fb8af9c41d02e671b33dbb8409be9ab31778dc341a06064a3dc7"
+    },
+    "required.json": {
+      "sha256": "3e3900dd0e546c1cb4aaab6b24ea0e06a8f7f8c05b272dcc87e85332501ed42e",
+      "groups_in_file": 5,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 2,
+      "cases_visible": 4,
+      "cases_hidden": 14,
+      "visible_file_sha256": "5fae367d999bf2a2f8672e83935e99d9f97bf7faa96628a6c0ea257e2d58fea7"
+    },
+    "type.json": {
+      "sha256": "4c5cbe6cbcd28af73761091367b20e07d0403847e236c06c31fc27061bd81192",
+      "groups_in_file": 11,
+      "groups_excluded": 0,
+      "groups_visible": 6,
+      "groups_hidden": 5,
+      "cases_visible": 45,
+      "cases_hidden": 35,
+      "visible_file_sha256": "a5f47983c376a0d3ab55c0f79e3a500ddd5afc7e6c2ad82f2c55dddd5e831a5d"
+    },
+    "unevaluatedItems.json": {
+      "sha256": "477e7e734ba86a76fc605d34afa6867ab25081b072792c2d853cbe666e42b7da",
+      "groups_in_file": 29,
+      "groups_excluded": 0,
+      "groups_visible": 15,
+      "groups_hidden": 14,
+      "cases_visible": 31,
+      "cases_hidden": 40,
+      "visible_file_sha256": "46fd44fb6409ce7fd03483e345a1108ff830ad145eae8997d4ab6f6c4244bca8"
+    },
+    "unevaluatedProperties.json": {
+      "sha256": "dbd5b401b09de49215f33ed7b30f4b9cd4a27e439624ad2a6aeb3a3879cac1dd",
+      "groups_in_file": 44,
+      "groups_excluded": 0,
+      "groups_visible": 22,
+      "groups_hidden": 22,
+      "cases_visible": 70,
+      "cases_hidden": 59,
+      "visible_file_sha256": "91d0a5a9b9a11eb21b1b5124c2774856d26c1e009307710c387fe0158f42cb2f"
+    },
+    "uniqueItems.json": {
+      "sha256": "ed84ef6ddc827659e257ba64cbe9679f06932b6320bea5c07622bf3d2cc4daa5",
+      "groups_in_file": 6,
+      "groups_excluded": 0,
+      "groups_visible": 3,
+      "groups_hidden": 3,
+      "cases_visible": 38,
+      "cases_hidden": 31,
+      "visible_file_sha256": "f827d24046d6a8511abe6c3b6021e871593a7a00257731c2cca390b48fb95b31"
+    },
+    "vocabulary.json": {
+      "sha256": "7c753d28de2d551fe0329b5a0ac939de921ffe1dfd1c82336e8d4a78d904ce8a",
+      "groups_in_file": 2,
+      "groups_excluded": 2,
+      "groups_visible": 0,
+      "groups_hidden": 0,
+      "cases_visible": 0,
+      "cases_hidden": 0
+    }
+  },
+  "files_without_groups_after_exclusion": [
+    "defs.json",
+    "vocabulary.json"
+  ],
+  "n_files_used": 45,
+  "n_groups_in_files": 369,
+  "n_groups_excluded": 13,
+  "n_groups_visible": 187,
+  "n_groups_hidden": 169,
+  "n_cases_visible": 656,
+  "n_cases_hidden": 585,
+  "direct_prompt": {
+    "chars": 326994,
+    "limit": 450000,
+    "trim_rule": "if direct_prompt.md would exceed 450,000 characters, whole visible test files are left out of the inlined set, starting from the last file in alphabetical order, until it fits (the files stay in A's workspace; the list is recorded here)",
+    "test_files_left_out": []
+  }
+}

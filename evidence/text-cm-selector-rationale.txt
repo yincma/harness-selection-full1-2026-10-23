@@ -1,0 +1,2 @@
+2: - Attempt 1 achieved 42.6% (142/333 tests), the highest score among all attempts. It successfully fixed link reference definitions and improved from an initial 36.9%, showing effective debugging and incremental progress.
+4: - Attempt 3 achieved 46.2% (154/333 tests) on provided tests but had timeout issues (Example 4 timed out) and broke HTML blocks (0/22), suggesting instability. The higher score may be due to test variance rather than robustness.

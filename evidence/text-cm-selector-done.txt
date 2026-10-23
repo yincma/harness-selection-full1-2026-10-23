@@ -1,0 +1,2 @@
+/out/choice = "B_1"
+/out/best_visible = "B_3"

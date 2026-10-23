@@ -1,0 +1,468 @@
+{
+  "started": "2026-10-23T00:42:40+0900",
+  "finished": true,
+  "model": "claude-haiku-4.5",
+  "effort": "",
+  "credits_total": 142.555,
+  "credits_overhead": 0.0,
+  "stopped_for_budget": false,
+  "jobs": {
+    "humaneval/A_direct": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0169,
+      "wall_s": 7.9,
+      "tool_calls": 0,
+      "timed_out": false,
+      "out": {
+        "files_written": [
+          "solution.py"
+        ]
+      }
+    },
+    "humaneval/B_1": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0952,
+      "wall_s": 21.0,
+      "tool_calls": 5,
+      "timed_out": false
+    },
+    "humaneval/B_2": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.3672,
+      "wall_s": 63.1,
+      "tool_calls": 20,
+      "timed_out": false
+    },
+    "humaneval/C_propose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0609,
+      "wall_s": 19.4
+    },
+    "humaneval/C_probe_general": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.4144,
+      "wall_s": 66.9,
+      "tool_calls": 16,
+      "timed_out": false
+    },
+    "humaneval/C_probe_specific": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.4464,
+      "wall_s": 69.9,
+      "tool_calls": 14,
+      "timed_out": false
+    },
+    "humaneval/B_3": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.1406,
+      "wall_s": 28.8,
+      "tool_calls": 7,
+      "timed_out": false
+    },
+    "humaneval/B_4": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.2953,
+      "wall_s": 54.0,
+      "tool_calls": 14,
+      "timed_out": false
+    },
+    "humaneval/C_compose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0709,
+      "wall_s": 17.8
+    },
+    "humaneval/C_final": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.1876,
+      "wall_s": 35.0,
+      "tool_calls": 7,
+      "timed_out": false
+    },
+    "humaneval/Bx4_select": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0403,
+      "wall_s": 11.2,
+      "out": {
+        "choice": "B_1",
+        "by": "selector",
+        "best_visible": "B_1"
+      }
+    },
+    "commonmark/A_direct": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.2276,
+      "wall_s": 197.5,
+      "tool_calls": 0,
+      "timed_out": false,
+      "out": {
+        "files_written": [
+          "cmark.py"
+        ]
+      }
+    },
+    "commonmark/B_1": {
+      "state": "ok",
+      "status": "success",
+      "credits": 6.3693,
+      "wall_s": 570.5,
+      "tool_calls": 88,
+      "timed_out": false
+    },
+    "commonmark/B_2": {
+      "state": "ok",
+      "status": "success",
+      "credits": 6.2397,
+      "wall_s": 524.0,
+      "tool_calls": 63,
+      "timed_out": false
+    },
+    "commonmark/C_propose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.1127,
+      "wall_s": 31.1
+    },
+    "commonmark/C_probe_general": {
+      "state": "ok",
+      "status": "success",
+      "credits": 9.7877,
+      "wall_s": 978.8,
+      "tool_calls": 135,
+      "timed_out": false
+    },
+    "commonmark/C_probe_specific": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.248,
+      "wall_s": 327.3,
+      "tool_calls": 37,
+      "timed_out": false,
+      "infra_retries": 1
+    },
+    "commonmark/B_3": {
+      "state": "ok",
+      "status": "success",
+      "credits": 5.3126,
+      "wall_s": 439.6,
+      "tool_calls": 54,
+      "timed_out": false
+    },
+    "commonmark/C_compose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.1013,
+      "wall_s": 24.2
+    },
+    "commonmark/C_final": {
+      "state": "ok",
+      "status": "success",
+      "credits": 10.0555,
+      "wall_s": 685.5,
+      "tool_calls": 117,
+      "timed_out": false
+    },
+    "commonmark/B_4": {
+      "state": "ok",
+      "status": "success",
+      "credits": 7.135,
+      "wall_s": 675.9,
+      "tool_calls": 64,
+      "timed_out": false
+    },
+    "jsonschema/A_direct": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.3892,
+      "wall_s": 44.7,
+      "tool_calls": 0,
+      "timed_out": false,
+      "out": {
+        "files_written": [
+          "jsonschema_impl.py"
+        ]
+      }
+    },
+    "jsonschema/B_1": {
+      "state": "ok",
+      "status": "success",
+      "credits": 4.6731,
+      "wall_s": 380.7,
+      "tool_calls": 68,
+      "timed_out": false
+    },
+    "commonmark/Bx4_select": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0676,
+      "wall_s": 13.4,
+      "out": {
+        "choice": "B_1",
+        "by": "selector",
+        "best_visible": "B_3"
+      }
+    },
+    "jsonschema/B_2": {
+      "state": "ok",
+      "status": "success",
+      "credits": 7.8595,
+      "wall_s": 558.9,
+      "tool_calls": 118,
+      "timed_out": false
+    },
+    "jsonschema/C_propose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.1102,
+      "wall_s": 27.6
+    },
+    "jsonschema/C_probe_general": {
+      "state": "ok",
+      "status": "success",
+      "credits": 8.8521,
+      "wall_s": 508.9,
+      "tool_calls": 93,
+      "timed_out": false
+    },
+    "jsonschema/C_probe_specific": {
+      "state": "ok",
+      "status": "success",
+      "credits": 7.3282,
+      "wall_s": 550.0,
+      "tool_calls": 93,
+      "timed_out": false
+    },
+    "jsonschema/B_3": {
+      "state": "ok",
+      "status": "success",
+      "credits": 9.7943,
+      "wall_s": 700.3,
+      "tool_calls": 156,
+      "timed_out": false
+    },
+    "jsonschema/C_compose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0958,
+      "wall_s": 19.5
+    },
+    "jsonschema/C_final": {
+      "state": "ok",
+      "status": "success",
+      "credits": 6.5221,
+      "wall_s": 502.3,
+      "tool_calls": 89,
+      "timed_out": false
+    },
+    "jsonschema/B_4": {
+      "state": "ok",
+      "status": "success",
+      "credits": 6.7792,
+      "wall_s": 520.7,
+      "tool_calls": 104,
+      "timed_out": false
+    },
+    "swe1/A_direct": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.5104,
+      "wall_s": 72.1,
+      "tool_calls": 0,
+      "timed_out": false,
+      "out": {
+        "files_written": []
+      }
+    },
+    "swe1/B_1": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.0425,
+      "wall_s": 121.7,
+      "tool_calls": 36,
+      "timed_out": false
+    },
+    "swe1/C_propose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0729,
+      "wall_s": 19.6
+    },
+    "swe1/C_probe_general": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.508,
+      "wall_s": 166.8,
+      "tool_calls": 42,
+      "timed_out": false
+    },
+    "jsonschema/Bx4_select": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0761,
+      "wall_s": 13.5,
+      "out": {
+        "choice": "B_1",
+        "by": "selector",
+        "best_visible": "B_1"
+      }
+    },
+    "swe1/C_probe_specific": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.6798,
+      "wall_s": 163.9,
+      "tool_calls": 45,
+      "timed_out": false
+    },
+    "swe1/B_2": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.5299,
+      "wall_s": 129.2,
+      "tool_calls": 36,
+      "timed_out": false
+    },
+    "swe1/C_compose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0788,
+      "wall_s": 18.3
+    },
+    "swe1/C_final": {
+      "state": "ok",
+      "status": "success",
+      "credits": 1.8815,
+      "wall_s": 179.2,
+      "tool_calls": 51,
+      "timed_out": false
+    },
+    "swe1/B_3": {
+      "state": "ok",
+      "status": "success",
+      "credits": 2.3749,
+      "wall_s": 205.7,
+      "tool_calls": 48,
+      "timed_out": false
+    },
+    "swe1/B_4": {
+      "state": "ok",
+      "status": "success",
+      "credits": 2.0111,
+      "wall_s": 157.1,
+      "tool_calls": 43,
+      "timed_out": false
+    },
+    "swe2/A_direct": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.4284,
+      "wall_s": 63.5,
+      "tool_calls": 0,
+      "timed_out": false,
+      "out": {
+        "files_written": []
+      }
+    },
+    "swe2/B_1": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.0655,
+      "wall_s": 264.3,
+      "tool_calls": 75,
+      "timed_out": false
+    },
+    "swe1/Bx4_select": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0622,
+      "wall_s": 13.5,
+      "out": {
+        "choice": "B_1",
+        "by": "selector",
+        "best_visible": null
+      }
+    },
+    "swe2/B_2": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.7971,
+      "wall_s": 292.3,
+      "tool_calls": 75,
+      "timed_out": false
+    },
+    "swe2/C_propose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0891,
+      "wall_s": 24.4
+    },
+    "swe2/C_probe_general": {
+      "state": "ok",
+      "status": "success",
+      "credits": 2.1396,
+      "wall_s": 229.5,
+      "tool_calls": 70,
+      "timed_out": false
+    },
+    "swe2/C_probe_specific": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.9312,
+      "wall_s": 360.1,
+      "tool_calls": 91,
+      "timed_out": false
+    },
+    "swe2/B_3": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.6642,
+      "wall_s": 252.8,
+      "tool_calls": 72,
+      "timed_out": false
+    },
+    "swe2/C_compose": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0907,
+      "wall_s": 20.2
+    },
+    "swe2/C_final": {
+      "state": "ok",
+      "status": "success",
+      "credits": 4.5098,
+      "wall_s": 315.2,
+      "tool_calls": 78,
+      "timed_out": false
+    },
+    "swe2/B_4": {
+      "state": "ok",
+      "status": "success",
+      "credits": 3.7407,
+      "wall_s": 253.8,
+      "tool_calls": 72,
+      "timed_out": false
+    },
+    "swe2/Bx4_select": {
+      "state": "ok",
+      "status": "success",
+      "credits": 0.0742,
+      "wall_s": 13.2,
+      "out": {
+        "choice": "B_4",
+        "by": "selector",
+        "best_visible": null
+      }
+    }
+  }
+}

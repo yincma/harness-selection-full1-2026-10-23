@@ -1,0 +1,313 @@
+{
+  "label": "full1",
+  "model": "claude-haiku-4.5",
+  "tasks": {
+    "humaneval": {
+      "metric": {
+        "score": "official hidden HumanEval check passes: 100, else 0",
+        "secondary": "provided docstring examples passed, % of 2"
+      },
+      "groups": {
+        "A": {
+          "run": "A_direct",
+          "score": 100.0,
+          "credits": 0.017,
+          "e2e_s": 7.9,
+          "sum_s": 7.9
+        },
+        "B": {
+          "run": "B_1",
+          "score": 100.0,
+          "credits": 0.095,
+          "e2e_s": 21.0,
+          "sum_s": 21.0
+        },
+        "Bx4": {
+          "run": "B_1",
+          "score": 100.0,
+          "credits": 0.939,
+          "e2e_s": 74.3,
+          "sum_s": 178.1,
+          "chosen_by": "selector"
+        },
+        "C": {
+          "run": "C_final",
+          "score": 100.0,
+          "credits": 1.275,
+          "e2e_s": 163.10000000000002,
+          "sum_s": 230.0
+        }
+      },
+      "reference": {
+        "B_runs": {
+          "B_1": 100.0,
+          "B_2": 100.0,
+          "B_3": 100.0,
+          "B_4": 100.0
+        },
+        "B_spread": {
+          "min": 100.0,
+          "median": 100.0,
+          "max": 100.0
+        },
+        "Bx4_by_best_provided": {
+          "run": "B_1",
+          "score": 100.0
+        },
+        "best_of_B_by_hidden_upper_bound": 100.0,
+        "C_probes": {
+          "C_probe_general": 100.0,
+          "C_probe_specific": 100.0
+        }
+      },
+      "notes": []
+    },
+    "commonmark": {
+      "metric": {
+        "score": "hidden examples passed, % of 319",
+        "secondary": "provided examples passed, % of 333"
+      },
+      "groups": {
+        "A": {
+          "run": "A_direct",
+          "score": 37.3,
+          "credits": 1.228,
+          "e2e_s": 197.5,
+          "sum_s": 197.5
+        },
+        "B": {
+          "run": "B_1",
+          "score": 45.1,
+          "credits": 6.369,
+          "e2e_s": 570.5,
+          "sum_s": 570.5
+        },
+        "Bx4": {
+          "run": "B_1",
+          "score": 45.1,
+          "credits": 25.124,
+          "e2e_s": 689.3,
+          "sum_s": 2223.4,
+          "chosen_by": "selector"
+        },
+        "C": {
+          "run": "C_final",
+          "score": 51.1,
+          "credits": 29.674,
+          "e2e_s": 2290.1000000000004,
+          "sum_s": 2617.4
+        }
+      },
+      "reference": {
+        "B_runs": {
+          "B_1": 45.1,
+          "B_2": 38.2,
+          "B_3": 0.0,
+          "B_4": 38.9
+        },
+        "B_spread": {
+          "min": 0.0,
+          "median": 38.55,
+          "max": 45.1
+        },
+        "Bx4_by_best_provided": {
+          "run": "B_3",
+          "score": 0.0
+        },
+        "best_of_B_by_hidden_upper_bound": 45.1,
+        "C_probes": {
+          "C_probe_general": 51.1,
+          "C_probe_specific": 27.9
+        }
+      },
+      "notes": [
+        "C_probe_specific: 1 infrastructure re-run(s)",
+        "B_3: static check violation -> 0"
+      ]
+    },
+    "jsonschema": {
+      "metric": {
+        "score": "hidden test cases passed, % of 585 (169 groups)",
+        "secondary": "provided test cases passed, % of 656 (187 groups)"
+      },
+      "groups": {
+        "A": {
+          "run": "A_direct",
+          "score": 91.5,
+          "credits": 0.389,
+          "e2e_s": 44.7,
+          "sum_s": 44.7
+        },
+        "B": {
+          "run": "B_1",
+          "score": 96.4,
+          "credits": 4.673,
+          "e2e_s": 380.7,
+          "sum_s": 380.7
+        },
+        "Bx4": {
+          "run": "B_1",
+          "score": 96.4,
+          "credits": 29.182,
+          "e2e_s": 713.8,
+          "sum_s": 2174.1,
+          "chosen_by": "selector"
+        },
+        "C": {
+          "run": "C_final",
+          "score": 89.4,
+          "credits": 27.581,
+          "e2e_s": 1480.1,
+          "sum_s": 1989.0
+        }
+      },
+      "reference": {
+        "B_runs": {
+          "B_1": 96.4,
+          "B_2": 94.4,
+          "B_3": 95.6,
+          "B_4": 95.9
+        },
+        "B_spread": {
+          "min": 94.4,
+          "median": 95.75,
+          "max": 96.4
+        },
+        "Bx4_by_best_provided": {
+          "run": "B_1",
+          "score": 96.4
+        },
+        "best_of_B_by_hidden_upper_bound": 96.4,
+        "C_probes": {
+          "C_probe_general": 96.1,
+          "C_probe_specific": 94.0
+        }
+      },
+      "notes": []
+    },
+    "swe1": {
+      "metric": {
+        "score": "resolved (every FAIL_TO_PASS and PASS_TO_PASS test passes) = 100, else 0",
+        "secondary": "FAIL_TO_PASS tests passed, % of 1"
+      },
+      "groups": {
+        "A": {
+          "run": "A_direct",
+          "score": 0.0,
+          "credits": 0.51,
+          "e2e_s": 72.1,
+          "sum_s": 72.1
+        },
+        "B": {
+          "run": "B_1",
+          "score": 100.0,
+          "credits": 1.042,
+          "e2e_s": 121.7,
+          "sum_s": 121.7
+        },
+        "Bx4": {
+          "run": "B_1",
+          "score": 100.0,
+          "credits": 7.021,
+          "e2e_s": 219.2,
+          "sum_s": 627.1999999999999,
+          "chosen_by": "selector"
+        },
+        "C": {
+          "run": "C_final",
+          "score": 100.0,
+          "credits": 6.263,
+          "e2e_s": 505.6,
+          "sum_s": 669.5
+        }
+      },
+      "reference": {
+        "B_runs": {
+          "B_1": 100.0,
+          "B_2": 100.0,
+          "B_3": 100.0,
+          "B_4": 100.0
+        },
+        "B_spread": {
+          "min": 100.0,
+          "median": 100.0,
+          "max": 100.0
+        },
+        "Bx4_by_best_provided": {
+          "run": null,
+          "score": null
+        },
+        "best_of_B_by_hidden_upper_bound": 100.0,
+        "C_probes": {
+          "C_probe_general": 100.0,
+          "C_probe_specific": 100.0
+        }
+      },
+      "notes": [
+        "A_direct: repo unchanged (no deliverable)"
+      ]
+    },
+    "swe2": {
+      "metric": {
+        "score": "resolved (every FAIL_TO_PASS and PASS_TO_PASS test passes) = 100, else 0",
+        "secondary": "FAIL_TO_PASS tests passed, % of 1"
+      },
+      "groups": {
+        "A": {
+          "run": "A_direct",
+          "score": 0.0,
+          "credits": 0.428,
+          "e2e_s": 63.5,
+          "sum_s": 63.5
+        },
+        "B": {
+          "run": "B_1",
+          "score": 0.0,
+          "credits": 3.066,
+          "e2e_s": 264.3,
+          "sum_s": 264.3
+        },
+        "Bx4": {
+          "run": "B_4",
+          "score": 0.0,
+          "credits": 14.342,
+          "e2e_s": 305.5,
+          "sum_s": 1076.4,
+          "chosen_by": "selector"
+        },
+        "C": {
+          "run": "C_final",
+          "score": 0.0,
+          "credits": 13.826,
+          "e2e_s": 984.2,
+          "sum_s": 1213.7
+        }
+      },
+      "reference": {
+        "B_runs": {
+          "B_1": 0.0,
+          "B_2": 0.0,
+          "B_3": 0.0,
+          "B_4": 0.0
+        },
+        "B_spread": {
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        },
+        "Bx4_by_best_provided": {
+          "run": null,
+          "score": null
+        },
+        "best_of_B_by_hidden_upper_bound": 0.0,
+        "C_probes": {
+          "C_probe_general": 0.0,
+          "C_probe_specific": 0.0
+        }
+      },
+      "notes": [
+        "A_direct: repo unchanged (no deliverable)"
+      ]
+    }
+  }
+}

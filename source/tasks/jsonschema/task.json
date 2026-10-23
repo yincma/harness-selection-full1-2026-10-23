@@ -1,0 +1,24 @@
+{
+  "id": "jsonschema",
+  "title": "JSON Schema draft 2020-12 validator from scratch",
+  "tier": "spec",
+  "template": "template",
+  "task_prompt": "task_prompt.md",
+  "direct_prompt": "direct_prompt.md",
+  "direct_output": {"mode": "single_file", "path": "jsonschema_impl.py"},
+  "guard": {
+    "write_files": ["jsonschema_impl.py", "NOTES.md"],
+    "write_dirs": ["jsonschema_lib", "scratch"],
+    "shell": [
+      "\\./run_tests\\.sh( [A-Za-z0-9_.,:=-]+)*",
+      "\\./run_py\\.sh scratch/[A-Za-z0-9_./-]+\\.py",
+      "ls( -[a-zA-Z]+)?( [A-Za-z0-9_./-]+)?"
+    ],
+    "shell_help": "only ./run_tests.sh [options], ./run_py.sh scratch/<file>.py and ls are allowed"
+  },
+  "setup": null,
+  "visible": {"json_cmd": ["./run_tests.sh", "--json"], "text_cmd": ["./run_tests.sh", "--max-fail", "5"]},
+  "grader": ["{py}", "{task_dir}/grade_task.py", "{task_runs}"],
+  "metric": {"score": "hidden test cases passed, % of 585 (169 groups)",
+             "secondary": "provided test cases passed, % of 656 (187 groups)"}
+}
